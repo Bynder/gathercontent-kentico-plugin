@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C3A65B62-12CC-4B49-9E27-939CEB9F7224}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GatherContent.Connector.Managers</RootNamespace>
+    <AssemblyName>GatherContent.Connector.Managers</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\TryMapItemState.cs" />
+    <Compile Include="Interfaces\ICacheManager.cs" />
+    <Compile Include="Interfaces\IDropTreeManager.cs" />
+    <Compile Include="Interfaces\IImportManager.cs" />
+    <Compile Include="Interfaces\IManager.cs" />
+    <Compile Include="Interfaces\IMappingManager.cs" />
+    <Compile Include="Interfaces\IUpdateManager.cs" />
+    <Compile Include="Managers\BaseManager.cs" />
+    <Compile Include="Managers\CacheManager.cs" />
+    <Compile Include="Managers\DropTreeManager.cs" />
+    <Compile Include="Managers\ImportManager.cs" />
+    <Compile Include="Managers\MappingManager.cs" />
+    <Compile Include="Managers\TestConnectionManager.cs" />
+    <Compile Include="Managers\UpdateManager.cs" />
+    <Compile Include="Models\Constants.cs" />
+    <Compile Include="Models\ImportItems\AvailableMapping.cs" />
+    <Compile Include="Models\ImportItems\AvailableMultiLocationsMappings.cs" />
+    <Compile Include="Models\ImportItems\DropTreeModel.cs" />
+    <Compile Include="Models\ImportItems\FiltersModel.cs" />
+    <Compile Include="Models\ImportItems\ImportCMSFiled.cs" />
+    <Compile Include="Models\ImportItems\ImportItembyLocation.cs" />
+    <Compile Include="Models\ImportItems\ImportItemModel.cs" />
+    <Compile Include="Models\ImportItems\ImportListItem.cs" />
+    <Compile Include="Models\ImportItems\ImportResultItemModel.cs" />
+    <Compile Include="Models\ImportItems\ImportResultModel.cs" />
+    <Compile Include="Models\ImportItems\ItemWithLocationDataModel.cs" />
+    <Compile Include="Models\ImportItems\LocationImportItemModel.cs" />
+    <Compile Include="Models\ImportItems\MappingResultModel.cs" />
+    <Compile Include="Models\ImportItems\New\AvailableMapping.cs" />
+    <Compile Include="Models\ImportItems\New\FiltersModel.cs" />
+    <Compile Include="Models\ImportItems\New\GcItemModel.cs" />
+    <Compile Include="Models\ImportItems\New\ItemModel.cs" />
+    <Compile Include="Models\ImportItems\New\ItemResultModel.cs" />
+    <Compile Include="Models\ImportItems\SelectItemsForImportModel.cs" />
+    <Compile Include="Models\ImportItems\SelectItemsForImportWithLocation.cs" />
+    <Compile Include="Models\ImportItems\TableDataModel.cs" />
+    <Compile Include="Models\Mapping\CmsTemplateFieldModel.cs" />
+    <Compile Include="Models\Mapping\CmsTemplateModel.cs" />
+    <Compile Include="Models\Mapping\FieldMappingModel.cs" />
+    <Compile Include="Models\Mapping\GcFieldModel.cs" />
+    <Compile Include="Models\Mapping\GcProjectModel.cs" />
+    <Compile Include="Models\Mapping\GcStatusModel.cs" />
+    <Compile Include="Models\Mapping\GcTabModel.cs" />
+    <Compile Include="Models\Mapping\GcTemplateModel.cs" />
+    <Compile Include="Models\Mapping\MappingModel.cs" />
+    <Compile Include="Models\UpdateItems\New\UpdateItemModel.cs" />
+    <Compile Include="Models\UpdateItems\New\UpdateModel.cs" />
+    <Compile Include="Models\UpdateItems\UpdateFiltersModel.cs" />
+    <Compile Include="Models\UpdateItems\UpdateGCItem.cs" />
+    <Compile Include="Models\UpdateItems\UpdateListIds.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GatherContent.Connector.Entities\GatherContent.Connector.Entities.csproj">
+      <Project>{68c73a2c-81bd-4499-9d07-d74a5fa4d706}</Project>
+      <Name>GatherContent.Connector.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GatherContent.Connector.GatherContentService\GatherContent.Connector.GatherContentService.csproj">
+      <Project>{3a4663f6-3159-48ec-bd89-f2b393832c0f}</Project>
+      <Name>GatherContent.Connector.GatherContentService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GatherContent.Connector.IRepositories\GatherContent.Connector.IRepositories.csproj">
+      <Project>{3f1a77c4-f740-4dc0-8a34-e6f17b0e2b23}</Project>
+      <Name>GatherContent.Connector.IRepositories</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
