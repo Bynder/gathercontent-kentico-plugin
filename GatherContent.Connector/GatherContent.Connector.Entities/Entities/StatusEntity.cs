@@ -1,10 +1,10 @@
 ﻿namespace GatherContent.Connector.Entities.Entities
 {
-    using Newtonsoft.Json;
+  using Newtonsoft.Json;
 
-    public class StatusEntity
-    {
-        [JsonProperty(PropertyName = "data")]
-        public GCStatus Data { get; set; }
-    }
+  public class StatusEntity
+  {
+    [JsonProperty(PropertyName = "data")]
+    public GCStatus Data { get; set; }
+  }
 }

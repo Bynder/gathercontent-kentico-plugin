@@ -1,16 +1,18 @@
-﻿using System.Collections.Generic;
-
-namespace GatherContent.Connector.Managers.Models.ImportItems
+﻿namespace GatherContent.Connector.Managers.Models.ImportItems
 {
-    public class ItemWithLocationDataModel
+  using System.Collections.Generic;
+
+  public class ItemWithLocationDataModel
+  {
+    public ItemWithLocationDataModel()
     {
-        public List<ImportItembyLocation> Items { get; set; }
-
-        public ItemWithLocationDataModel() { }
-
-        public ItemWithLocationDataModel(List<ImportItembyLocation> items)
-        {
-            Items = items;
-        }
     }
+
+    public ItemWithLocationDataModel(List<ImportItembyLocation> items)
+    {
+      this.Items = items;
+    }
+
+    public List<ImportItembyLocation> Items { get; set; }
+  }
 }

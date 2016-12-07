@@ -1,28 +1,28 @@
 ﻿namespace GatherContentConnector.GatherContentConnector
 {
-    using System.Collections.Generic;
-    using System.Web.UI.WebControls;
+  using System.Collections.Generic;
+  using System.Web.UI.WebControls;
 
-    public class MappingTab
+  public class MappingTab
+  {
+    public MappingTab()
     {
-        public MappingTab()
-        {
-            this.Fields = new List<FiledMappingViewModel>();
-        }
-
-        public List<FiledMappingViewModel> Fields { get; set; }
-
-        public string TabName { get; set; }
+      this.Fields = new List<FiledMappingViewModel>();
     }
 
-    public class FiledMappingViewModel
-    {
-        public string GcFieldId { get; set; }
+    public List<FiledMappingViewModel> Fields { get; set; }
 
-        public string GcFieldName { get; set; }
+    public string TabName { get; set; }
+  }
 
-        public string GcFieldType { get; set; }
+  public class FiledMappingViewModel
+  {
+    public string GcFieldId { get; set; }
 
-        public ListItem[] KenticoFields { get; set; }
-    }
+    public string GcFieldName { get; set; }
+
+    public string GcFieldType { get; set; }
+
+    public ListItem[] KenticoFields { get; set; }
+  }
 }

@@ -1,17 +1,22 @@
-﻿using GatherContent.Connector.Managers.Models.Mapping;
-
-namespace GatherContent.Connector.Managers.Models.ImportItems.New
+﻿namespace GatherContent.Connector.Managers.Models.ImportItems.New
 {
-   public class ItemModel
+  using GatherContent.Connector.Managers.Models.Mapping;
+
+  public class ItemModel
+  {
+    public ItemModel()
     {
-       public ItemModel()
-       {
-           AvailableMappings = new AvailableMappings();
-       }
-        public GcItemModel GcItem { get; set; }
-        public string Breadcrumb { get; set; }
-        public GcTemplateModel GcTemplate { get; set; }
-        public GcStatusModel Status { get; set; }
-        public AvailableMappings AvailableMappings { get; set; }
+      this.AvailableMappings = new AvailableMappings();
     }
+
+    public AvailableMappings AvailableMappings { get; set; }
+
+    public string Breadcrumb { get; set; }
+
+    public GcItemModel GcItem { get; set; }
+
+    public GcTemplateModel GcTemplate { get; set; }
+
+    public GcStatusModel Status { get; set; }
+  }
 }

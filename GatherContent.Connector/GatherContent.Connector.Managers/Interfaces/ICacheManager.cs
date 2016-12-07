@@ -1,14 +1,14 @@
 ﻿namespace GatherContent.Connector.Managers.Interfaces
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    public interface ICacheManager
-    {
-        bool IsSet(string key);
+  /// <summary>
+  /// 
+  /// </summary>
+  public interface ICacheManager
+  {
+    T Get<T>(string key);
 
-        T Get<T>(string key);
+    bool IsSet(string key);
 
-        void Set(string key, object data, int cacheTime);
-    }
+    void Set(string key, object data, int cacheTime);
+  }
 }

@@ -1,9 +1,9 @@
 ﻿namespace GatherContent.Connector.IRepositories.Interfaces
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    public interface IRepository
-    {
-    }
+  /// <summary>
+  /// 
+  /// </summary>
+  public interface IRepository
+  {
+  }
 }

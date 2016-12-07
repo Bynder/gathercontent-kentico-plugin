@@ -1,8 +1,14 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ConfirmPage.aspx.cs" Inherits="GatherContentConnector.CMSModules.GatherContentConnector.Update.Pages.ConfirmPage" MasterPageFile="~/CMSMasterPages/UI/SimplePage.master" %>
+<%@ Import Namespace="System.Web.DynamicData" %>
+<%@ Import Namespace="System.Web.UI" %>
+<%@ Import Namespace="System.Web.UI.WebControls" %>
+<%@ Import Namespace="System.Web.UI.WebControls" %>
+<%@ Import Namespace="System.Web.UI.WebControls.Expressions" %>
+<%@ Import Namespace="System.Web.UI.WebControls.WebParts" %>
+<%@ Import Namespace="CMS.ExtendedControls" %>
+<%@ Import Namespace="CMS.UIControls.UniGridConfig" %>
 
 <%@ Register Src="~/CMSModules/GatherContentConnector/Controls/Grid/CustomGrid.ascx" TagName="UniGrid" TagPrefix="cms" %>
-<%@ Register TagPrefix="cms" Namespace="CMS.ExtendedControls" Assembly="CMS.ExtendedControls, Version=9.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9" %>
-<%@ Register TagPrefix="ug" Namespace="CMS.UIControls.UniGridConfig" Assembly="CMS.UIControls, Version=9.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9" %>
 
 <asp:Content ID="Content" ContentPlaceHolderID="plcContent" runat="Server">
     <div class="form-horizontal">

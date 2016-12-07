@@ -1,10 +1,10 @@
 ﻿namespace GatherContent.Connector.Entities.Entities
 {
-    using Newtonsoft.Json;
+  using Newtonsoft.Json;
 
-    public class Meta
-    {
-        [JsonProperty(PropertyName = "templates")]
-        public int Templates { get; set; }
-    }
+  public class Meta
+  {
+    [JsonProperty(PropertyName = "templates")]
+    public int Templates { get; set; }
+  }
 }

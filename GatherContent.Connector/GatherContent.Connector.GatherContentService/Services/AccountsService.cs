@@ -1,40 +1,40 @@
 ﻿namespace GatherContent.Connector.GatherContentService.Services
 {
-    using System.Net;
+  using System.Net;
 
-    using GatherContent.Connector.Entities;
-    using GatherContent.Connector.Entities.Entities;
-    using GatherContent.Connector.GatherContentService.Interfaces;
-    using GatherContent.Connector.GatherContentService.Services.Abstract;
+  using GatherContent.Connector.Entities;
+  using GatherContent.Connector.Entities.Entities;
+  using GatherContent.Connector.GatherContentService.Interfaces;
+  using GatherContent.Connector.GatherContentService.Services.Abstract;
+
+  /// <summary />
+  public class AccountsService : BaseService, IAccountsService
+  {
+    /// <summary />
+    /// <param name="accountSettings"></param>
+    public AccountsService(GCAccountSettings accountSettings)
+      : base(accountSettings)
+    {
+    }
+
+    protected override string ServiceUrl
+    {
+      get
+      {
+        return "accounts";
+      }
+    }
 
     /// <summary />
-    public class AccountsService : BaseService, IAccountsService
+    /// <returns></returns>
+    public AccountEntity GetAccounts()
     {
-        /// <summary />
-        /// <param name="accountSettings"></param>
-        public AccountsService(GCAccountSettings accountSettings)
-            : base(accountSettings)
-        {
-        }
+      WebRequest webrequest = CreateRequest(this.ServiceUrl);
+      webrequest.Method = WebRequestMethods.Http.Get;
 
-        protected override string ServiceUrl
-        {
-            get
-            {
-                return "accounts";
-            }
-        }
+      AccountEntity result = ReadResponse<AccountEntity>(webrequest);
 
-        /// <summary />
-        /// <returns></returns>
-        public AccountEntity GetAccounts()
-        {
-            WebRequest webrequest = CreateRequest(this.ServiceUrl);
-            webrequest.Method = WebRequestMethods.Http.Get;
-
-            AccountEntity result = ReadResponse<AccountEntity>(webrequest);
-
-            return result;
-        }
+      return result;
     }
+  }
 }

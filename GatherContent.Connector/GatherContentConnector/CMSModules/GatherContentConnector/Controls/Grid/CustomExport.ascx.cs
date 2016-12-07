@@ -1,13 +1,13 @@
 ﻿namespace GatherContentConnector.CMSModules.GatherContentConnector.Controls.Grid
 {
-    using System;
+  using System;
 
-    using CMS.UIControls;
+  using CMS.UIControls;
 
-    public partial class CustomExport : AdvancedExport
+  public partial class CustomExport : AdvancedExport
+  {
+    protected void Page_Load(object sender, EventArgs e)
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-        }
     }
+  }
 }

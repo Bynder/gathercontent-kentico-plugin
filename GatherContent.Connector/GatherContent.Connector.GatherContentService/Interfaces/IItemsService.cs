@@ -1,16 +1,16 @@
 ﻿namespace GatherContent.Connector.GatherContentService.Interfaces
 {
-    using GatherContent.Connector.Entities.Entities;
+  using GatherContent.Connector.Entities.Entities;
 
-    /// <summary />
-    public interface IItemsService : IService
-    {
-        void ChooseStatusForItem(string itemId, string statusId);
+  /// <summary />
+  public interface IItemsService : IService
+  {
+    void ChooseStatusForItem(string itemId, string statusId);
 
-        ItemFiles GetItemFiles(string itemId);
+    ItemFiles GetItemFiles(string itemId);
 
-        ItemsEntity GetItems(string projectId);
+    ItemsEntity GetItems(string projectId);
 
-        ItemEntity GetSingleItem(string itemId);
-    }
+    ItemEntity GetSingleItem(string itemId);
+  }
 }

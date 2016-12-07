@@ -1,15 +1,16 @@
-﻿using System.Collections.Generic;
-
-namespace GatherContent.Connector.Managers.Models.Mapping
+﻿namespace GatherContent.Connector.Managers.Models.Mapping
 {
-    public class GcTabModel
-    {
-        public GcTabModel()
-        {
-            Fields = new List<GcFieldModel>();
-        }
+  using System.Collections.Generic;
 
-        public string TabName { get; set; }
-        public List<GcFieldModel> Fields { get; set; }
+  public class GcTabModel
+  {
+    public GcTabModel()
+    {
+      this.Fields = new List<GcFieldModel>();
     }
+
+    public List<GcFieldModel> Fields { get; set; }
+
+    public string TabName { get; set; }
+  }
 }

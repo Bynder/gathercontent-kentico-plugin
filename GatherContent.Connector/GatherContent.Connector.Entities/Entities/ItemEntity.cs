@@ -1,10 +1,10 @@
 ﻿namespace GatherContent.Connector.Entities.Entities
 {
-    using Newtonsoft.Json;
+  using Newtonsoft.Json;
 
-    public class ItemEntity
-    {
-        [JsonProperty(PropertyName = "data")]
-        public GCItem Data { get; set; }
-    }
+  public class ItemEntity
+  {
+    [JsonProperty(PropertyName = "data")]
+    public GCItem Data { get; set; }
+  }
 }

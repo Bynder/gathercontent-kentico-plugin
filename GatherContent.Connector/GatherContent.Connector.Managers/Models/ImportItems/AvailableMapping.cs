@@ -1,16 +1,18 @@
-﻿
-using System.Collections.Generic;
-using GatherContent.Connector.Managers.Models.ImportItems.New;
-
-namespace GatherContent.Connector.Managers.Models.ImportItems
+﻿namespace GatherContent.Connector.Managers.Models.ImportItems
 {
-    public class AvailableMappings
+  using System.Collections.Generic;
+
+  using GatherContent.Connector.Managers.Models.ImportItems.New;
+
+  public class AvailableMappings
+  {
+    public AvailableMappings()
     {
-        public AvailableMappings()
-        {
-            Mappings = new List<AvailableMapping>();
-        }
-        public string SelectedMappingId { get; set; }
-        public List<AvailableMapping> Mappings { get; set; }
-    } 
+      this.Mappings = new List<AvailableMapping>();
+    }
+
+    public List<AvailableMapping> Mappings { get; set; }
+
+    public string SelectedMappingId { get; set; }
+  }
 }

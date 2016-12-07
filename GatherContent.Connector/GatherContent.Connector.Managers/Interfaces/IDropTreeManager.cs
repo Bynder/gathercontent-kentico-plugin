@@ -1,15 +1,16 @@
-﻿using System.Collections.Generic;
-using GatherContent.Connector.Managers.Models.ImportItems;
-
-namespace GatherContent.Connector.Managers.Interfaces
+﻿namespace GatherContent.Connector.Managers.Interfaces
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    public interface IDropTreeManager : IManager
-    {
-        List<DropTreeModel> GetTopLevelNode(string id);
+  using System.Collections.Generic;
 
-        List<DropTreeModel> GetChildrenNodes(string id);
-    }
+  using GatherContent.Connector.Managers.Models.ImportItems;
+
+  /// <summary>
+  /// 
+  /// </summary>
+  public interface IDropTreeManager : IManager
+  {
+    List<DropTreeModel> GetChildrenNodes(string id);
+
+    List<DropTreeModel> GetTopLevelNode(string id);
+  }
 }

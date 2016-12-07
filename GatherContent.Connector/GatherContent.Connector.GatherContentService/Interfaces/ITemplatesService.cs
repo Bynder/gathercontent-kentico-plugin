@@ -1,12 +1,12 @@
 ﻿namespace GatherContent.Connector.GatherContentService.Interfaces
 {
-    using GatherContent.Connector.Entities.Entities;
+  using GatherContent.Connector.Entities.Entities;
 
-    /// <summary />
-    public interface ITemplatesService : IService
-    {
-        TemplateEntity GetSingleTemplate(string templateId);
+  /// <summary />
+  public interface ITemplatesService : IService
+  {
+    TemplateEntity GetSingleTemplate(string templateId);
 
-        TemplatesEntity GetTemplates(string projectId);
-    }
+    TemplatesEntity GetTemplates(string projectId);
+  }
 }

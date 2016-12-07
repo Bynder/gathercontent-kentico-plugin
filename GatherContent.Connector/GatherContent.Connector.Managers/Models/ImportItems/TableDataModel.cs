@@ -1,23 +1,23 @@
-﻿using System.Collections.Generic;
-
-namespace GatherContent.Connector.Managers.Models.ImportItems
+﻿namespace GatherContent.Connector.Managers.Models.ImportItems
 {
-    public class TableDataModel
+  using System.Collections.Generic;
+
+  public class TableDataModel
+  {
+    public TableDataModel()
     {
-        public List<ImportListItem> Items { get; set; }
-
-        public TableDataModel()
-        {
-            Items = new List<ImportListItem>();
-        }
-
-        public TableDataModel(List<ImportListItem> items)
-        {
-            Items = new List<ImportListItem>();
-            if (items != null)
-            {
-                Items = items;
-            }
-        }
+      this.Items = new List<ImportListItem>();
     }
+
+    public TableDataModel(List<ImportListItem> items)
+    {
+      this.Items = new List<ImportListItem>();
+      if (items != null)
+      {
+        this.Items = items;
+      }
+    }
+
+    public List<ImportListItem> Items { get; set; }
+  }
 }

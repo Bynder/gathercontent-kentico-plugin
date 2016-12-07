@@ -1,6 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CMSMasterPages/UI/SimplePage.master" AutoEventWireup="true" CodeBehind="AddMapping.aspx.cs" Inherits="CMSApp.CMSModules.GatherContentConnector.Mappings.AddMapping" %>
-<%@ Register TagPrefix="ajaxToolkit" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit, Version=4.1.60919.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e" %>
-<%@ Register TagPrefix="cms" Namespace="CMS.ExtendedControls" Assembly="CMS.ExtendedControls, Version=9.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9" %>
+<%@ Import Namespace="System.Web.DynamicData" %>
+<%@ Import Namespace="System.Web.UI" %>
+<%@ Import Namespace="System.Web.UI.WebControls" %>
+<%@ Import Namespace="System.Web.UI.WebControls" %>
+<%@ Import Namespace="System.Web.UI.WebControls.Expressions" %>
+<%@ Import Namespace="System.Web.UI.WebControls.WebParts" %>
+<%@ Import Namespace="AjaxControlToolkit" %>
+<%@ Import Namespace="CMS.ExtendedControls" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="plcBeforeBody" runat="Server">
     <ajaxToolkit:ToolkitScriptManager ID="manScript" runat="server" ScriptMode="Release" EnableViewState="false" />

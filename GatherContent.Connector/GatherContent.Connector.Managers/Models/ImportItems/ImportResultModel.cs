@@ -1,14 +1,14 @@
-﻿using System.Collections.Generic;
-
-namespace GatherContent.Connector.Managers.Models.ImportItems
+﻿namespace GatherContent.Connector.Managers.Models.ImportItems
 {
-    public class ImportResultModel
-    {
-        public List<MappingResultModel> Items { get; set; }
+  using System.Collections.Generic;
 
-        public ImportResultModel(List<MappingResultModel> items)
-        {
-            Items = items;
-        }
+  public class ImportResultModel
+  {
+    public ImportResultModel(List<MappingResultModel> items)
+    {
+      this.Items = items;
     }
+
+    public List<MappingResultModel> Items { get; set; }
+  }
 }

@@ -1,6 +1,6 @@
 ﻿namespace GatherContent.Connector.Entities.Entities
 {
-    public class DueDates
-    {
-    }
+  public class DueDates
+  {
+  }
 }

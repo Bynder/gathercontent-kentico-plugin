@@ -1,18 +1,19 @@
-﻿using System.Collections.Generic;
-using GatherContent.Connector.Entities.Entities;
-
-namespace GatherContent.Connector.Managers.Models.ImportItems
+﻿namespace GatherContent.Connector.Managers.Models.ImportItems
 {
-    public class SelectItemsForImportWithLocation
+  using System.Collections.Generic;
+
+  using GatherContent.Connector.Entities.Entities;
+
+  public class SelectItemsForImportWithLocation
+  {
+    public SelectItemsForImportWithLocation(List<ImportItembyLocation> items, Project project, List<Project> projects, List<GCStatus> statuses, List<GCTemplate> templates)
     {
-        public FiltersModel Filters { get; set; }
-
-        public ItemWithLocationDataModel Data { get; set; }
-
-        public SelectItemsForImportWithLocation(List<ImportItembyLocation> items, Project project, List<Project> projects, List<GCStatus> statuses, List<GCTemplate> templates)
-        {
-            Filters = new FiltersModel(project, projects, templates, statuses);
-            Data = new ItemWithLocationDataModel(items);
-        }
+      this.Filters = new FiltersModel(project, projects, templates, statuses);
+      this.Data = new ItemWithLocationDataModel(items);
     }
+
+    public ItemWithLocationDataModel Data { get; set; }
+
+    public FiltersModel Filters { get; set; }
+  }
 }

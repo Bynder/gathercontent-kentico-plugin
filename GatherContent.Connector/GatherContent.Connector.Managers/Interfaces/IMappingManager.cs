@@ -1,30 +1,31 @@
-﻿using System.Collections.Generic;
-using GatherContent.Connector.Managers.Models.Mapping;
-
-namespace GatherContent.Connector.Managers.Interfaces
+﻿namespace GatherContent.Connector.Managers.Interfaces
 {
-    public interface IMappingManager : IManager
-    {
-        MappingModel GetSingleMappingModel(string gcTemplateId, string cmsMappingId);
+  using System.Collections.Generic;
 
-        List<MappingModel> GetMappingModel();
+  using GatherContent.Connector.Managers.Models.Mapping;
 
-        List<GcProjectModel> GetAllGcProjects();
+  public interface IMappingManager : IManager
+  {
+    void CreateMapping(MappingModel model);
 
-        List<CmsTemplateModel> GetAvailableTemplates();
+    void DeleteMapping(string scMappingId);
 
-        List<GcTemplateModel> GetTemplatesByProjectId(string gcProjectId);
+    List<GcProjectModel> GetAllGcProjects();
 
-        List<GcTabModel> GetFieldsByTemplateId(string gcTemplateId);
+    List<CmsTemplateModel> GetAvailableTemplates();
 
-        List<CmsTemplateFieldModel> GetCmsTemplateFields(string cmsTemplateId);
+    List<CmsTemplateFieldModel> GetCmsTemplateFields(string cmsTemplateId);
 
-        void UpdateMapping(MappingModel model);
+    List<GcTabModel> GetFieldsByTemplateId(string gcTemplateId);
 
-        void CreateMapping(MappingModel model);
+    List<MappingModel> GetMappingModel();
 
-        void DeleteMapping(string scMappingId);
+    MappingModel GetSingleMappingModel(string gcTemplateId, string cmsMappingId);
 
-        MappingModel GetTemplateMappingById(string mappingId);
-    }
+    MappingModel GetTemplateMappingById(string mappingId);
+
+    List<GcTemplateModel> GetTemplatesByProjectId(string gcProjectId);
+
+    void UpdateMapping(MappingModel model);
+  }
 }

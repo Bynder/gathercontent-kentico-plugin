@@ -1,9 +1,9 @@
 ﻿namespace GatherContent.Connector.IRepositories.Interfaces
 {
-    using System;
+  using System;
 
-    public interface ILogRepository
-    {
-        void Log(string source, string code, Exception ex, string messsage = null);
-    }
+  public interface ILogRepository
+  {
+    void Log(string source, string code, Exception ex, string messsage = null);
+  }
 }
