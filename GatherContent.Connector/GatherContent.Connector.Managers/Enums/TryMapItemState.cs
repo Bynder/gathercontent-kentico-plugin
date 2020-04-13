@@ -1,14 +1,23 @@
 ﻿namespace GatherContent.Connector.Managers.Enums
 {
-  /// <summary>
-  /// 
-  /// </summary>
-  public enum TryMapItemState
-  {
-    Success = 0,
+    /// <summary>
+    /// 
+    /// </summary>
+    public enum TryMapItemState
+    {
+        /// <summary>
+        /// The success.
+        /// </summary>
+        Success = 0,
 
-    TemplateError = 1,
+        /// <summary>
+        /// The template error.
+        /// </summary>
+        TemplateError = 1,
 
-    FieldError = 2
-  }
+        /// <summary>
+        /// The field error.
+        /// </summary>
+        FieldError = 2
+    }
 }

@@ -2,8 +2,8 @@
 {
   using System.Collections.Generic;
 
-  using GatherContent.Connector.IRepositories.Models.Import;
-  using GatherContent.Connector.IRepositories.Models.Mapping;
+  using Models.Import;
+  using Models.Mapping;
 
   public interface IMappingRepository : IRepository
   {

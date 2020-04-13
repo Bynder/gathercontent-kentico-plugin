@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<grid>
+  <actions showheader="false"/>
+  <columns>
+    <column source="id" externalsourcename="Id" caption="Id" visible="false" />
+    <column columnname="projectId" visible="false" caption="Project">
+      <filter size="100" path="~/CMSModules/GatherContentConnector/Controls/Filter/ProjectFilter.ascx" source="projectId"/>
+    </column>
+
+    <column source="status" externalsourcename="status" caption="Workflow Status" allowexport="false" allowsorting="true" wrap="false" >
+      <filter size="100" path="~/CMSModules/GatherContentConnector/Controls/Filter/StatusFilter.ascx" source="statusId"/>
+    </column>
+
+    <column source="name" caption="GatherContent Item Name" allowexport="false" allowsorting="true">
+      <filter size="100" path="~/CMSModules/GatherContentConnector/Controls/Filter/ItemNameFilter.ascx" source="name"/>
+    </column>
+
+    <column source="lastModified" caption="Last Modified in GatherContent" allowexport="false" allowsorting="true" wrap="false" />
+
+    <column source="path" cssclass="main-column-200" externalsourcename="path" caption="Path" allowexport="false" allowsorting="true" wrap="true" />
+
+    <column source="temaplateName" externalsourcename="temaplateName" caption="GatherContent Template Name" allowexport="false" allowsorting="true" wrap="false">
+      <filter size="100" path="~/CMSModules/GatherContentConnector/Controls/Filter/TemplateNameFilter.ascx" source="templateId"/>
+    </column>
+  </columns>
+  <options>
+    <key name="DisplayFilter" value="true"/>
+    <key name="FilterLimit" value="0"/>
+    <key name="ShowSelection" value="true"/>
+  </options>
+</grid>

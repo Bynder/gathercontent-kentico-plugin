@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<grid>
+  <actions parameters="TemplateMappingID" showheader="false">
+    <action name="edit" caption="$General.Edit$" fonticonclass="icon-edit" fonticonstyle="allow" />
+    <action name="#delete" caption="$General.Delete$" fonticonclass="icon-bin" fonticonstyle="critical" confirmation="Are you sure you want to delete the selected mapping?" />
+  </actions>
+  <columns>
+    <column source="MappingTitle" caption="Mapping Name" wrap="false" allowexport="false" localize="true">
+      <filter type="text" size="200" />
+    </column>
+    <column source="GcTemplateName" allowexport="false" caption="GatherContent Template Name"/>
+    <column source="CmsTemplateName" allowexport="false" caption="Kentico Page Type" />
+    <column source="ProjectName" allowexport="false" caption="GatherContent Project Name" />
+    <column source="TemplateMappingLastModified" allowexport="false" caption="Last Mapped" />
+  </columns>
+  <options>
+    <key name="DisplayFilter" value="false" />
+    <key name="FilterLimit" value="0"/>
+    <key name="ShowSelection" value="false"/>
+  </options>
+</grid>

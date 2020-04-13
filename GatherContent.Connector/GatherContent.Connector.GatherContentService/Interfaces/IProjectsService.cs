@@ -2,7 +2,9 @@
 {
   using GatherContent.Connector.Entities.Entities;
 
-  /// <summary />
+  /// <summary>
+  /// 
+  /// </summary>
   public interface IProjectsService : IService
   {
     StatusesEntity GetAllStatuses(string projectId);

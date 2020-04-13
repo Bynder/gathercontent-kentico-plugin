@@ -1,16 +1,16 @@
 ﻿namespace GatherContent.Connector.Managers.Models.UpdateItems.New
 {
-  using System.Collections.Generic;
+    using System.Collections.Generic;
 
-  public class UpdateModel
-  {
-    public UpdateModel()
+    public class UpdateModel
     {
-      this.Items = new List<UpdateItemModel>();
+        public UpdateModel()
+        {
+            this.Items = new List<UpdateItemModel>();
+        }
+
+        public UpdateFiltersModel Filters { get; set; }
+
+        public List<UpdateItemModel> Items { get; set; }
     }
-
-    public UpdateFiltersModel Filters { get; set; }
-
-    public List<UpdateItemModel> Items { get; set; }
-  }
 }

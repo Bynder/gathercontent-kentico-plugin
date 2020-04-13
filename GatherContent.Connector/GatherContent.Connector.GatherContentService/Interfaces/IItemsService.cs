@@ -2,7 +2,9 @@
 {
   using GatherContent.Connector.Entities.Entities;
 
-  /// <summary />
+  /// <summary>
+  /// 
+  /// </summary>
   public interface IItemsService : IService
   {
     void ChooseStatusForItem(string itemId, string statusId);

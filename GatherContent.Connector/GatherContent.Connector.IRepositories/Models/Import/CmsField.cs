@@ -2,14 +2,11 @@
 {
   using System.Collections.Generic;
 
+  /// <summary>
+  /// 
+  /// </summary>
   public class CmsField
   {
-    public CmsField()
-    {
-      this.Files = new List<File>();
-      this.Options = new List<string>();
-    }
-
     public List<File> Files { get; set; }
 
     public List<string> Options { get; set; }

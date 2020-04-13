@@ -10,10 +10,13 @@
   using GatherContent.Connector.GatherContentService.Services.Abstract;
 
   /// <summary>
+  /// 
   /// </summary>
   public class ItemsService : BaseService, IItemsService
   {
-    /// <summary />
+    /// <summary>
+    /// 
+    /// </summary>
     /// <param name="accountSettings"></param>
     public ItemsService(GCAccountSettings accountSettings)
       : base(accountSettings)
@@ -28,7 +31,9 @@
       }
     }
 
-    /// <summary />
+    /// <summary>
+    /// 
+    /// </summary>
     /// <param name="itemId"></param>
     /// <param name="templateId"></param>
     public void ApplyTemplateToItem(string itemId, string templateId)
@@ -43,7 +48,9 @@
       ReadResponse(webrequest);
     }
 
-    /// <summary />
+    /// <summary>
+    /// 
+    /// </summary>
     /// <param name="itemId"></param>
     /// <param name="statusId"></param>
     public void ChooseStatusForItem(string itemId, string statusId)
@@ -58,7 +65,9 @@
       ReadResponse(webrequest);
     }
 
-    /// <summary />
+    /// <summary>
+    /// 
+    /// </summary>
     /// <param name="itemId"></param>
     /// <returns></returns>
     public ItemFiles GetItemFiles(string itemId)
@@ -70,20 +79,22 @@
       return ReadResponse<ItemFiles>(webrequest);
     }
 
-    /// <summary />
+    /// <summary>
+    /// 
+    /// </summary>
     /// <param name="projectId"></param>
     /// <returns></returns>
     public ItemsEntity GetItems(string projectId)
     {
-      var url = string.Format("{0}?project_id={1}", this.ServiceUrl, projectId);
-      var webrequest = CreateRequest(url);
+      string url = string.Format("{0}?project_id={1}", this.ServiceUrl, projectId);
+      WebRequest webrequest = CreateRequest(url);
       webrequest.Method = WebRequestMethods.Http.Get;
 
       return ReadResponse<ItemsEntity>(webrequest);
     }
 
     /// <summary>
-    ///
+    /// 
     /// </summary>
     /// <param name="itemId"></param>
     /// <returns></returns>
@@ -97,7 +108,7 @@
     }
 
     /// <summary>
-    ///
+    /// 
     /// </summary>
     /// <param name="projectId"></param>
     /// <param name="name"></param>
@@ -134,7 +145,7 @@
     }
 
     /// <summary>
-    ///
+    /// 
     /// </summary>
     /// <param name="itemId"></param>
     /// <param name="config"></param>

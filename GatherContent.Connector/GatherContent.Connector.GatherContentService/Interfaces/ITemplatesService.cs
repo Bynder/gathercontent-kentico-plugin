@@ -2,7 +2,9 @@
 {
   using GatherContent.Connector.Entities.Entities;
 
-  /// <summary />
+  /// <summary>
+  /// 
+  /// </summary>
   public interface ITemplatesService : IService
   {
     TemplateEntity GetSingleTemplate(string templateId);

@@ -1,0 +1,887 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9737C00C-C58E-41D5-828D-74C0E176284C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GatherContentConnector</RootNamespace>
+    <AssemblyName>GatherContentConnector</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CMSModules\GatherContentConnector\Controls\Filter\ItemNameFilter.ascx.cs">
+      <DependentUpon>ItemNameFilter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Controls\Filter\ItemNameFilter.ascx.designer.cs">
+      <DependentUpon>ItemNameFilter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Controls\Filter\ProjectFilter.ascx.cs">
+      <DependentUpon>ProjectFilter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Controls\Filter\ProjectFilter.ascx.designer.cs">
+      <DependentUpon>ProjectFilter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Controls\Filter\StatusFilter.ascx.cs">
+      <DependentUpon>StatusFilter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Controls\Filter\StatusFilter.ascx.designer.cs">
+      <DependentUpon>StatusFilter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Controls\Filter\TemplateNameFilter.ascx.cs">
+      <DependentUpon>TemplateNameFilter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Controls\Filter\TemplateNameFilter.ascx.designer.cs">
+      <DependentUpon>TemplateNameFilter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Controls\Grid\CustomExport.ascx.cs">
+      <DependentUpon>CustomExport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Controls\Grid\CustomExport.ascx.designer.cs">
+      <DependentUpon>CustomExport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Controls\Grid\CustomGrid.ascx.cs">
+      <DependentUpon>CustomGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Controls\Grid\CustomGrid.ascx.designer.cs">
+      <DependentUpon>CustomGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Controls\Grid\CustomMassActions.ascx.cs">
+      <DependentUpon>CustomMassActions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Controls\Grid\CustomMassActions.ascx.designer.cs">
+      <DependentUpon>CustomMassActions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Controls\Grid\CustomPager.ascx.cs">
+      <DependentUpon>CustomPager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Controls\Grid\CustomPager.ascx.designer.cs">
+      <DependentUpon>CustomPager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Controls\PageCultureSelector.ascx.cs">
+      <DependentUpon>PageCultureSelector.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Controls\PageCultureSelector.ascx.designer.cs">
+      <DependentUpon>PageCultureSelector.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Controls\SelectPath.ascx.cs">
+      <DependentUpon>SelectPath.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Controls\SelectPath.ascx.designer.cs">
+      <DependentUpon>SelectPath.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Import\ImportGridExtender.cs" />
+    <Compile Include="CMSModules\GatherContentConnector\Import\Pages\ConfirmImportPage.aspx.cs">
+      <DependentUpon>ConfirmImportPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Import\Pages\ConfirmImportPage.aspx.designer.cs">
+      <DependentUpon>ConfirmImportPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Mappings\AddMapping.aspx.cs">
+      <DependentUpon>AddMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Mappings\AddMapping.aspx.designer.cs">
+      <DependentUpon>AddMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Mappings\MappingsGridExtender.cs" />
+    <Compile Include="CMSModules\GatherContentConnector\Update\Pages\ConfirmPage.aspx.cs">
+      <DependentUpon>ConfirmPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Update\Pages\ConfirmPage.aspx.designer.cs">
+      <DependentUpon>ConfirmPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Update\Pages\GridExtenderPage.aspx.cs">
+      <DependentUpon>GridExtenderPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Update\Pages\GridExtenderPage.aspx.designer.cs">
+      <DependentUpon>GridExtenderPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Update\Pages\ResultPage.aspx.cs">
+      <DependentUpon>ResultPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMSModules\GatherContentConnector\Update\Pages\ResultPage.aspx.designer.cs">
+      <DependentUpon>ResultPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GatherContentConnector\CustomDropDownList.cs" />
+    <Compile Include="GatherContentConnector\FieldMappingInfo.cs" />
+    <Compile Include="GatherContentConnector\FieldMappingInfoProvider.cs" />
+    <Compile Include="GatherContentConnector\FiledMappingViewModel.cs" />
+    <Compile Include="GatherContentConnector\IoC\Bootstrapper.cs" />
+    <Compile Include="GatherContentConnector\IoC\GCServiceLocator.cs" />
+    <Compile Include="GatherContentConnector\IoC\Installer.cs" />
+    <Compile Include="GatherContentConnector\TemplateMappingInfo.cs" />
+    <Compile Include="GatherContentConnector\TemplateMappingInfoProvider.cs" />
+    <Compile Include="Properties\GatherContentConnectorAssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\CMSModules\GatherContentConnector\UI\Grids\import.xml" />
+    <Content Include="App_Data\CMSModules\GatherContentConnector\UI\Grids\mappings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GatherContent.Connector\GatherContent.Connector.Entities\GatherContent.Connector.Entities.csproj">
+      <Project>{68c73a2c-81bd-4499-9d07-d74a5fa4d706}</Project>
+      <Name>GatherContent.Connector.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GatherContent.Connector\GatherContent.Connector.GatherContentService\GatherContent.Connector.GatherContentService.csproj">
+      <Project>{3a4663f6-3159-48ec-bd89-f2b393832c0f}</Project>
+      <Name>GatherContent.Connector.GatherContentService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GatherContent.Connector\GatherContent.Connector.IRepositories\GatherContent.Connector.IRepositories.csproj">
+      <Project>{3f1a77c4-f740-4dc0-8a34-e6f17b0e2b23}</Project>
+      <Name>GatherContent.Connector.IRepositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GatherContent.Connector\GatherContent.Connector.Managers\GatherContent.Connector.Managers.csproj">
+      <Project>{c3a65b62-12cc-4b49-9e27-939ceb9f7224}</Project>
+      <Name>GatherContent.Connector.Managers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CMSModules\GatherContentConnector\Content\Main.css" />
+    <Content Include="CMSModules\GatherContentConnector\Controls\Filter\ItemNameFilter.ascx" />
+    <Content Include="CMSModules\GatherContentConnector\Controls\Filter\ProjectFilter.ascx" />
+    <Content Include="CMSModules\GatherContentConnector\Controls\Filter\StatusFilter.ascx" />
+    <Content Include="CMSModules\GatherContentConnector\Controls\Filter\TemplateNameFilter.ascx" />
+    <Content Include="CMSModules\GatherContentConnector\Controls\Grid\CustomExport.ascx" />
+    <Content Include="CMSModules\GatherContentConnector\Controls\Grid\CustomGrid.ascx" />
+    <Content Include="CMSModules\GatherContentConnector\Controls\Grid\CustomMassActions.ascx" />
+    <Content Include="CMSModules\GatherContentConnector\Controls\Grid\CustomPager.ascx" />
+    <Content Include="CMSModules\GatherContentConnector\Controls\PageCultureSelector.ascx" />
+    <Content Include="CMSModules\GatherContentConnector\Controls\SelectPath.ascx" />
+    <Content Include="CMSModules\GatherContentConnector\Import\Pages\ConfirmImportPage.aspx" />
+    <Content Include="CMSModules\GatherContentConnector\Mappings\AddMapping.aspx" />
+    <Content Include="CMSModules\GatherContentConnector\Update\Pages\ConfirmPage.aspx" />
+    <Content Include="CMSModules\GatherContentConnector\Update\Pages\GridExtenderPage.aspx" />
+    <Content Include="CMSModules\GatherContentConnector\Update\Pages\ResultPage.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\CMSModules\GatherContentConnector\GatherContent.Connector.Repositories.config" />
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CMSResources\GatherContentConnector\Default.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\AWSSDK.S3.3.1.9.0\analyzers\dotnet\cs\AWSSDK.S3.CodeAnalysis.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="CMS.Activities">
+      <HintPath>..\Lib\CMS.Activities.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Activities.Loggers">
+      <HintPath>..\Lib\CMS.Activities.Loggers.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Activities.Web.UI">
+      <HintPath>..\Lib\CMS.Activities.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.AmazonStorage">
+      <HintPath>..\Lib\CMS.AmazonStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ApplicationDashboard.Web.UI">
+      <HintPath>..\Lib\CMS.ApplicationDashboard.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.AspNet.Platform">
+      <HintPath>..\Lib\CMS.AspNet.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Automation">
+      <HintPath>..\Lib\CMS.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.AzureStorage">
+      <HintPath>..\Lib\CMS.AzureStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.BannerManagement">
+      <HintPath>..\Lib\CMS.BannerManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Base">
+      <HintPath>..\Lib\CMS.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Base.Web.UI">
+      <HintPath>..\Lib\CMS.Base.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Blogs">
+      <HintPath>..\Lib\CMS.Blogs.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Blogs.Web.UI">
+      <HintPath>..\Lib\CMS.Blogs.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Chat">
+      <HintPath>..\Lib\CMS.Chat.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Chat.Web.UI">
+      <HintPath>..\Lib\CMS.Chat.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Community">
+      <HintPath>..\Lib\CMS.Community.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Community.Web.UI">
+      <HintPath>..\Lib\CMS.Community.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ContactManagement">
+      <HintPath>..\Lib\CMS.ContactManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ContactManagement.Web.UI">
+      <HintPath>..\Lib\CMS.ContactManagement.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ContinuousIntegration">
+      <HintPath>..\Lib\CMS.ContinuousIntegration.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Core">
+      <HintPath>..\Lib\CMS.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.CustomTables">
+      <HintPath>..\Lib\CMS.CustomTables.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DancingGoat.Samples">
+      <HintPath>..\Lib\CMS.DancingGoat.Samples.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DataEngine">
+      <HintPath>..\Lib\CMS.DataEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DataProtection">
+      <HintPath>..\Lib\CMS.DataProtection.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DeviceProfiles">
+      <HintPath>..\Lib\CMS.DeviceProfiles.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DocumentEngine">
+      <HintPath>..\Lib\CMS.DocumentEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DocumentEngine.Web.UI">
+      <HintPath>..\Lib\CMS.DocumentEngine.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DocumentEngine.Web.UI.XmlSerializers">
+      <HintPath>..\Lib\CMS.DocumentEngine.Web.UI.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.DocumentWebServices">
+      <HintPath>..\Lib\CMS.DocumentWebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Ecommerce">
+      <HintPath>..\Lib\CMS.Ecommerce.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Ecommerce.Web.UI">
+      <HintPath>..\Lib\CMS.Ecommerce.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.EmailEngine">
+      <HintPath>..\Lib\CMS.EmailEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.EventLog">
+      <HintPath>..\Lib\CMS.EventLog.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.EventManager">
+      <HintPath>..\Lib\CMS.EventManager.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ExternalAuthentication">
+      <HintPath>..\Lib\CMS.ExternalAuthentication.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ExternalAuthentication.Web.UI">
+      <HintPath>..\Lib\CMS.ExternalAuthentication.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.FormEngine">
+      <HintPath>..\Lib\CMS.FormEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.FormEngine.Web.UI">
+      <HintPath>..\Lib\CMS.FormEngine.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Forums">
+      <HintPath>..\Lib\CMS.Forums.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Forums.Web.UI">
+      <HintPath>..\Lib\CMS.Forums.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Globalization">
+      <HintPath>..\Lib\CMS.Globalization.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Globalization.Web.UI">
+      <HintPath>..\Lib\CMS.Globalization.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.HealthMonitoring">
+      <HintPath>..\Lib\CMS.HealthMonitoring.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Helpers">
+      <HintPath>..\Lib\CMS.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ImportExport">
+      <HintPath>..\Lib\CMS.ImportExport.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.IO">
+      <HintPath>..\Lib\CMS.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.LicenseProvider">
+      <HintPath>..\Lib\CMS.LicenseProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.LicenseProvider.XmlSerializers">
+      <HintPath>..\Lib\CMS.LicenseProvider.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MacroEngine">
+      <HintPath>..\Lib\CMS.MacroEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MediaLibrary">
+      <HintPath>..\Lib\CMS.MediaLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MediaLibrary.Web.UI">
+      <HintPath>..\Lib\CMS.MediaLibrary.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Membership">
+      <HintPath>..\Lib\CMS.Membership.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Membership.Web.UI">
+      <HintPath>..\Lib\CMS.Membership.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MembershipProvider">
+      <HintPath>..\Lib\CMS.MembershipProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MessageBoards">
+      <HintPath>..\Lib\CMS.MessageBoards.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.MessageBoards.Web.UI">
+      <HintPath>..\Lib\CMS.MessageBoards.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Modules">
+      <HintPath>..\Lib\CMS.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Modules.Web.UI">
+      <HintPath>..\Lib\CMS.Modules.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ModuleUsageTracking">
+      <HintPath>..\Lib\CMS.ModuleUsageTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Newsletters">
+      <HintPath>..\Lib\CMS.Newsletters.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Newsletters.Web.UI">
+      <HintPath>..\Lib\CMS.Newsletters.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Notifications.Web.UI">
+      <HintPath>..\Lib\CMS.Notifications.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.OnlineForms">
+      <HintPath>..\Lib\CMS.OnlineForms.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.OnlineForms.Web.UI">
+      <HintPath>..\Lib\CMS.OnlineForms.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.OnlineMarketing">
+      <HintPath>..\Lib\CMS.OnlineMarketing.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.OnlineMarketing.Web.UI">
+      <HintPath>..\Lib\CMS.OnlineMarketing.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.OutputFilter">
+      <HintPath>..\Lib\CMS.OutputFilter.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Personas">
+      <HintPath>..\Lib\CMS.Personas.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Personas.Web.UI">
+      <HintPath>..\Lib\CMS.Personas.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Polls">
+      <HintPath>..\Lib\CMS.Polls.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.PortalEngine">
+      <HintPath>..\Lib\CMS.PortalEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.PortalEngine.Web.UI">
+      <HintPath>..\Lib\CMS.PortalEngine.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Protection">
+      <HintPath>..\Lib\CMS.Protection.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Protection.Web.UI">
+      <HintPath>..\Lib\CMS.Protection.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Relationships">
+      <HintPath>..\Lib\CMS.Relationships.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Reporting">
+      <HintPath>..\Lib\CMS.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Reporting.Web.UI">
+      <HintPath>..\Lib\CMS.Reporting.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.ResponsiveImages">
+      <HintPath>..\Lib\CMS.ResponsiveImages.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Routing.Web">
+      <HintPath>..\Lib\CMS.Routing.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SalesForce">
+      <HintPath>..\Lib\CMS.SalesForce.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Scheduler">
+      <HintPath>..\Lib\CMS.Scheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Search">
+      <HintPath>..\Lib\CMS.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Search.Azure">
+      <HintPath>..\Lib\CMS.Search.Azure.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Search.Lucene3">
+      <HintPath>..\Lib\CMS.Search.Lucene3.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Search.TextExtractors">
+      <HintPath>..\Lib\CMS.Search.TextExtractors.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Search.Web.UI">
+      <HintPath>..\Lib\CMS.Search.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SharePoint">
+      <HintPath>..\Lib\CMS.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SharePoint.Web.UI">
+      <HintPath>..\Lib\CMS.SharePoint.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SiteProvider">
+      <HintPath>..\Lib\CMS.SiteProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SocialMarketing">
+      <HintPath>..\Lib\CMS.SocialMarketing.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SocialMarketing.Web.UI">
+      <HintPath>..\Lib\CMS.SocialMarketing.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.StrandsRecommender">
+      <HintPath>..\Lib\CMS.StrandsRecommender.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.StrandsRecommender.Web.UI">
+      <HintPath>..\Lib\CMS.StrandsRecommender.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Synchronization">
+      <HintPath>..\Lib\CMS.Synchronization.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Synchronization.Web.UI">
+      <HintPath>..\Lib\CMS.Synchronization.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Synchronization.WSE3">
+      <HintPath>..\Lib\CMS.Synchronization.WSE3.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.SynchronizationEngine">
+      <HintPath>..\Lib\CMS.SynchronizationEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.Taxonomy">
+      <HintPath>..\Lib\CMS.Taxonomy.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.TranslationServices">
+      <HintPath>..\Lib\CMS.TranslationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.TranslationServices.Web.UI">
+      <HintPath>..\Lib\CMS.TranslationServices.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.UIControls">
+      <HintPath>..\Lib\CMS.UIControls.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.URLRewritingEngine">
+      <HintPath>..\Lib\CMS.URLRewritingEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.VirtualPathProvider">
+      <HintPath>..\Lib\CMS.VirtualPathProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebAnalytics">
+      <HintPath>..\Lib\CMS.WebAnalytics.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebAnalytics.Web.UI">
+      <HintPath>..\Lib\CMS.WebAnalytics.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebApi">
+      <HintPath>..\Lib\CMS.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebDAV">
+      <HintPath>..\Lib\CMS.WebDAV.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebDAV.Web.UI">
+      <HintPath>..\Lib\CMS.WebDAV.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebFarmSync">
+      <HintPath>..\Lib\CMS.WebFarmSync.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WebServices">
+      <HintPath>..\Lib\CMS.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WIFIntegration">
+      <HintPath>..\Lib\CMS.WIFIntegration.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WinServiceEngine">
+      <HintPath>..\Lib\CMS.WinServiceEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WorkflowEngine">
+      <HintPath>..\Lib\CMS.WorkflowEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CMS.WorkflowEngine.Web.UI">
+      <HintPath>..\Lib\CMS.WorkflowEngine.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonServiceLocator.WindsorAdapter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.WindsorAdapter.1.0\lib\NET35\CommonServiceLocator.WindsorAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Diagnostics, Version=2.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth, Version=4.0.0.11165, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\DotNetOpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="ITHit.WebDAV.Server, Version=2.1.1.170, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\ITHit.WebDAV.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net.v3, Version=3.0.3.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Lucene.Net.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net.WordNet.SynExpand, Version=2.0.0.1, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Lucene.Net.WordNet.SynExpand.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Microsoft.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.TransactSql.ScriptDom, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Microsoft.SqlServer.TransactSql.ScriptDom.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Services3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Microsoft.Web.Services3.dll</HintPath>
+    </Reference>
+    <Reference Include="PDFClown, Version=0.1.2.1, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\PDFClown.dll</HintPath>
+    </Reference>
+    <Reference Include="PreMailer.Net, Version=1.5.5.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\PreMailer.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ThoughtWorks.QRCode, Version=12.0.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Ude, Version=0.1.0.0, Culture=neutral, PublicKeyToken=834b12a258f213f9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Ude.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit, Version=17.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.17.1.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin, Version=5.14.5506.26196, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxMin.5.14.5506.26202\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
+      <HintPath>..\packages\AngleSharp.0.9.9\lib\net45\AngleSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.Core.3.1.11.0\lib\net45\AWSSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.S3, Version=3.1.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.S3.3.1.9.0\lib\net45\AWSSDK.S3.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.2.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.4.1.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth">
+      <HintPath>..\Lib\DotNetOpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Facebook.6.4.2\lib\net45\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="GlobalLink.Connect, Version=4.18.2.0, Culture=neutral, PublicKeyToken=946d606070618fd4, processorArchitecture=MSIL">
+      <HintPath>..\packages\GlobalLink.Connect.4.18.3.1\lib\net46\GlobalLink.Connect.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToTwitter.net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=957107be965c25d9, processorArchitecture=MSIL">
+      <HintPath>..\packages\linqtotwitter.4.0.0\lib\net45\LinqToTwitter.net.dll</HintPath>
+    </Reference>
+    <Reference Include="MaxMind.Db, Version=2.0.0.0, Culture=neutral, PublicKeyToken=66afa4cc5ae853ac, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaxMind.Db.2.4.0\lib\net45\MaxMind.Db.dll</HintPath>
+    </Reference>
+    <Reference Include="MaxMind.GeoIP2, Version=3.0.0.0, Culture=neutral, PublicKeyToken=66afa4cc5ae853ac, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaxMind.GeoIP2.3.0.0\lib\net45\MaxMind.GeoIP2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Search, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.Search.5.0.3\lib\net452\Microsoft.Azure.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Search.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.Search.Common.5.0.3\lib\net452\Microsoft.Azure.Search.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Search.Data, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.Search.Data.5.0.3\lib\net452\Microsoft.Azure.Search.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Search.Service, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.Search.Service.5.0.3\lib\net452\Microsoft.Azure.Search.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.4\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.6.4\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Client.Policy, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.6621.1200\lib\net45\Microsoft.Office.Client.Policy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Client.TranslationServices, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.6621.1200\lib\net45\Microsoft.Office.Client.TranslationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.SharePoint.Tools, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.6621.1200\lib\net45\Microsoft.Office.SharePoint.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Online.SharePoint.Client.Tenant, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.6621.1200\lib\net45\Microsoft.Online.SharePoint.Client.Tenant.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ProjectServer.Client, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.6621.1200\lib\net45\Microsoft.ProjectServer.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Rest.ClientRuntime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Rest.ClientRuntime.2.3.17\lib\net452\Microsoft.Rest.ClientRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Rest.ClientRuntime.Azure, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Rest.ClientRuntime.Azure.3.3.18\lib\net452\Microsoft.Rest.ClientRuntime.Azure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.6621.1200\lib\net45\Microsoft.SharePoint.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.DocumentManagement, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.6621.1200\lib\net45\Microsoft.SharePoint.Client.DocumentManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Publishing, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.6621.1200\lib\net45\Microsoft.SharePoint.Client.Publishing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.6621.1200\lib\net45\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime.Windows, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.6621.1200\lib\net45\Microsoft.SharePoint.Client.Runtime.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Search, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.6621.1200\lib\net45\Microsoft.SharePoint.Client.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Search.Applications, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.6621.1200\lib\net45\Microsoft.SharePoint.Client.Search.Applications.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Taxonomy, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.6621.1200\lib\net45\Microsoft.SharePoint.Client.Taxonomy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.UserProfiles, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.6621.1200\lib\net45\Microsoft.SharePoint.Client.UserProfiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.WorkflowServices, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.6621.1200\lib\net45\Microsoft.SharePoint.Client.WorkflowServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Spatial, Version=7.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Spatial.7.2.0\lib\portable-net45+win8+wpa81\Microsoft.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.XmlTransform, Version=2.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Xdt.2.1.1\lib\net40\Microsoft.Web.XmlTransform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.2.0.2.0\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=7.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.Storage.7.2.0\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil, Version=0.10.0.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.10.0\lib\net40\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb, Version=0.10.0.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.10.0\lib\net40\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb, Version=0.10.0.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.10.0\lib\net40\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks, Version=0.10.0.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.10.0\lib\net40\Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="NetSpell.SpellChecker, Version=2.1.7.25730, Culture=neutral, PublicKeyToken=318b389f0db66e46, processorArchitecture=MSIL">
+      <HintPath>..\Lib\NetSpell.SpellChecker.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Core, Version=2.14.0.832, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Core.2.14.0\lib\net40-Client\NuGet.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenPop, Version=2.0.4.369, Culture=neutral, PublicKeyToken=6bdb97f144b7efc8, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenPop.NET.2.0.4.369\lib\net20\OpenPop.dll</HintPath>
+    </Reference>
+    <Reference Include="PayPal, Version=1.8.0.0, Culture=neutral, PublicKeyToken=5b4afc1ccaef40fb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PayPal.1.8.0\lib\net451\PayPal.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.HashFunction.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=80c9288e394c1322, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.HashFunction.Core.2.0.0\lib\net45\System.Data.HashFunction.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.HashFunction.CRC, Version=2.0.0.0, Culture=neutral, PublicKeyToken=80c9288e394c1322, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.HashFunction.CRC.2.0.0\lib\net45\System.Data.HashFunction.CRC.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.HashFunction.Interfaces, Version=2.0.0.0, Culture=neutral, PublicKeyToken=80c9288e394c1322, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.HashFunction.Interfaces.2.0.0\lib\net45\System.Data.HashFunction.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Interfaces.2.2.5\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Linq.2.2.5\lib\net45\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-PlatformServices.2.2.5\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Spatial, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.6.4\lib\net40\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3686</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3686/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+</Project>

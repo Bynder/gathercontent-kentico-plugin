@@ -1,6 +1,8 @@
 ﻿namespace GatherContent.Connector.GatherContentService.Interfaces
 {
-  /// <summary />
+  /// <summary>
+  /// 
+  /// </summary>
   public interface IService
   {
   }
