@@ -24,13 +24,13 @@ Connecting a powerful content production platform, to a powerful content publish
         * Download nuget package from this [link](https://github.com/gathercontent/kentico-plugin/blob/release/v12/NugetPackage/GatherContentConnector.12.0.1.nupkg)
         * Setup local nugetfeed and copy nuget package **GatherContentConnector.12.0.1.nupkg** to newly created feed.
         * Install package to your MVC solution
-    * Install module in Kentico package
+    * Import module in Kentico
         * To finish the installation or update, open your Kentico application in a browser. During the processing of the first request after the module installation or 
             update, the system automatically imports database objects from the module installation package to the Kentico database.
             More information this [link](https://docs.kentico.com/k12/deploying-websites/exporting-and-importing-sites/importing-a-site-or-objects)
 
             You can verify that the module was installed or updated successfully in the Event log application - check that the log contains no errors and the following event:
-            
+
             Source = ModuleInstaller, Event code = MODULEINSTALLED
             -or-
             Source = ModuleInstaller, Event code = MODULEUPDATED
