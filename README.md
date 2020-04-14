@@ -17,9 +17,11 @@ GatherContent is an online platform for pulling together, editing, and reviewing
 Connecting a powerful content production platform, to a powerful content publishing platform.
 
 ## Download & installation
+
 ### Requirements
 * **Kentico 12.0.29** or later version is required to use this component.
-1. Download and install module:
+
+* Download and install module:
     * Install module through nuget package
         * Download nuget package from this [link](https://github.com/gathercontent/kentico-plugin/blob/release/v12/NugetPackage/GatherContentConnector.12.0.1.nupkg)
         * Setup local nugetfeed and copy nuget package **GatherContentConnector.12.0.1.nupkg** to newly created feed.
@@ -34,3 +36,7 @@ Connecting a powerful content production platform, to a powerful content publish
             Source = ModuleInstaller, Event code = MODULEINSTALLED
             -or-
             Source = ModuleInstaller, Event code = MODULEUPDATED
+
+## Contributions 
+
+You can submit bugs through the issue list and we will get to them.
